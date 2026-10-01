@@ -1,0 +1,10 @@
+fastapi==0.142.2
+uvicorn==0.52.4
+python-multipart==0.0.32
+pydantic-settings==2.15.0
+langchain-core==1.6.6
+langchain-openai==1.6.7
+langchain-community==0.4.2
+langchain-text-splitters==1.1.2
+faiss-cpu==1.15.1
+pypdf==5.9.0

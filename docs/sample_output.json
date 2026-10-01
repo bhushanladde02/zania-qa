@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "question": "Do you have formally defined criteria for notifying a client during an incident that might impact the security of their data or systems? What are your SLAs for notification?",
+      "answer": "Data Not Available",
+      "sources": []
+    },
+    {
+      "question": "Is personal information transmitted, processed, stored, or disclosed to or retained by third parties? If yes, describe.",
+      "answer": "Data Not Available",
+      "sources": []
+    },
+    {
+      "question": "Which cloud providers do you rely on?",
+      "answer": "We rely on Google Cloud Platform (GCP) for our data hosting and cryptographic key management.",
+      "sources": [
+        0,
+        4,
+        3,
+        18,
+        8
+      ]
+    },
+    {
+      "question": "Please specify the primary data center location/region of the underlying cloud infrastructure used to host the service(s) as well as the backup location(s).",
+      "answer": "The primary data center location is in the US Central region, specifically hosted within Google Cloud Platform (GCP). However, the context does not provide information about backup locations.",
+      "sources": [
+        0,
+        4,
+        8,
+        2,
+        5
+      ]
+    },
+    {
+      "question": "Which of the following, if any, are performed as part of your monitoring process for the service: a. Application Performance Monitoring (APM) b. End User Monitoring (EUM) c. Digital Experience Monitoring (DEM)",
+      "answer": "Data Not Available",
+      "sources": []
+    }
+  ]
+}
