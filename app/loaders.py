@@ -1,5 +1,7 @@
 import io
 import json
+import re
+import unicodedata
 from typing import Any
 
 from langchain_core.documents import Document
@@ -42,6 +44,14 @@ def parse_questions(raw: bytes) -> list[str]:
     return questions
 
 
+def _clean_pdf_text(txt: str) -> str:
+    # real pdfs (google docs exports especially) come out with one word per line and
+    # ligatures like "\ufb01" instead of "fi". NFKC fixes the ligatures, then collapse
+    # all the whitespace noise so chunks hold actual words and embeddings aren't diluted
+    txt = unicodedata.normalize("NFKC", txt)
+    return re.sub(r"\s+", " ", txt).strip()
+
+
 def load_pdf(raw: bytes) -> list[Document]:
     try:
         reader = PdfReader(io.BytesIO(raw))
@@ -50,7 +60,7 @@ def load_pdf(raw: bytes) -> list[Document]:
 
     docs = []
     for i, page in enumerate(reader.pages, start=1):
-        txt = (page.extract_text() or "").strip()
+        txt = _clean_pdf_text(page.extract_text() or "")
         if txt:  # skip blank / image only pages
             docs.append(Document(page_content=txt, metadata={"page": i}))
 
@@ -88,7 +98,7 @@ def load_json_doc(raw: bytes) -> list[Document]:
         for i, rec in enumerate(data):
             text = "\n".join(_flatten(rec))
             if text:
-                docs.append(Document(page_content=text, metadata={"record": i}))
+                docs.append(Document(page_content=text, metadata={"record": i, "whole": True}))
     else:
         text = "\n".join(_flatten(data))
         docs = [Document(page_content=text, metadata={"record": 0})] if text else []

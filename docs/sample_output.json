@@ -15,21 +15,27 @@
       "answer": "We rely on Google Cloud Platform (GCP) for our data hosting and cryptographic key management.",
       "sources": [
         0,
+        8,
         4,
         3,
         18,
-        8
+        9,
+        5,
+        6
       ]
     },
     {
       "question": "Please specify the primary data center location/region of the underlying cloud infrastructure used to host the service(s) as well as the backup location(s).",
-      "answer": "The primary data center location is in the US Central region, specifically hosted within Google Cloud Platform (GCP). However, the context does not provide information about backup locations.",
+      "answer": "The primary data center location is in the US Central region, specifically hosted within Google Cloud Platform (GCP). However, there is no information provided about the backup location(s).",
       "sources": [
         0,
         4,
         8,
+        6,
+        5,
         2,
-        5
+        3,
+        17
       ]
     },
     {

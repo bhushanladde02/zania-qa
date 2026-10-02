@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "question": "Do you have formally defined criteria for notifying a client during an incident that might impact the security of their data or systems? What are your SLAs for notification?",
+      "answer": "The context mentions that any changes that may adversely affect customers will be communicated clearly by Boardingware, including categories of change, planned date and time of change, technical description of the changes, and notification at the start and completion of changes. However, it does not specify formally defined criteria for notifying a client during an incident or SLAs for notification. \n\nTherefore, the criteria and SLAs for notification are not covered.",
+      "sources": [
+        17,
+        11,
+        5,
+        3,
+        1,
+        2,
+        8
+      ]
+    },
+    {
+      "question": "Is personal information transmitted, processed, stored, or disclosed to or retained by third parties? If yes, describe.",
+      "answer": "Data Not Available",
+      "sources": []
+    },
+    {
+      "question": "Which cloud providers do you rely on?",
+      "answer": "Boardingware relies on AWS (Amazon Web Services) as their chosen cloud infrastructure provider.",
+      "sources": [
+        19,
+        3,
+        1,
+        5
+      ]
+    },
+    {
+      "question": "Please specify the primary data center location/region of the underlying cloud infrastructure used to host the service(s) as well as the backup location(s).",
+      "answer": "The primary data center location/region of the underlying cloud infrastructure is not specified in the context. However, it is mentioned that backups of databases are stored within their respective Regions across multiple Availability Zones. Data on the specific primary region is not available.",
+      "sources": [
+        9,
+        7,
+        19,
+        1,
+        6,
+        16,
+        17
+      ]
+    },
+    {
+      "question": "Which of the following, if any, are performed as part of your monitoring process for the service: a. Application Performance Monitoring (APM) b. End User Monitoring (EUM) c. Digital Experience Monitoring (DEM)",
+      "answer": "Data Not Available",
+      "sources": []
+    }
+  ]
+}

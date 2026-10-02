@@ -6,3 +6,5 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .idea/
+# third-party sample pdfs, download separately (see README)
+tests/fixtures/*.pdf

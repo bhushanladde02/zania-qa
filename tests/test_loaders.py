@@ -49,3 +49,10 @@ def test_broken_pdf():
 def test_unsupported_ext():
     with pytest.raises(LoaderError):
         load_document("notes.txt", b"hello")
+
+
+def test_pdf_text_cleanup():
+    from app.loaders import _clean_pdf_text
+
+    messy = "Boardingware  has  partnered\n \nwith\n \nAWS  for  conﬁguration"
+    assert _clean_pdf_text(messy) == "Boardingware has partnered with AWS for configuration"

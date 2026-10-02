@@ -8,3 +8,4 @@ langchain-community==0.4.2
 langchain-text-splitters==1.1.2
 faiss-cpu==1.15.1
 pypdf==5.9.0
+rank-bm25==0.2.2

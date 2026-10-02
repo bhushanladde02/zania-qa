@@ -10,9 +10,9 @@ class Settings(BaseSettings):
     llm_model: str = "gpt-4o-mini"  # brief says stick to this one
     embedding_model: str = "text-embedding-3-small"
 
-    chunk_size: int = 1000
-    chunk_overlap: int = 150
-    top_k: int = 5
+    chunk_size: int = 500
+    chunk_overlap: int = 100
+    top_k: int = 8  # tuned on a real 19-page pdf, see README
 
     # 20MB felt like plenty for a SOC2 report, bump it if needed
     max_upload_mb: int = 20
