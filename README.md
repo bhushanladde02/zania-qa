@@ -196,3 +196,11 @@ tests/
 - **No auth or rate limiting** on the endpoint.
 - **Retrieval quality** on long compliance docs could improve further with a cross-encoder reranker, and answers could be streamed.
 - `langchain-community` is being sunset; FAISS would move to its standalone package once that's stable.
+
+## Time spent
+
+About 5 hours in total, including reading and working through small examples from the LangChain tutorial [Retrieval Augmented Generation (RAG) with Deep Agents](https://docs.langchain.com/oss/python/deepagents/rag) before starting on the assignment.
+
+## AI assistance
+
+This README was written with help from an AI assistant (Claude).
